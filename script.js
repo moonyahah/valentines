@@ -68,6 +68,14 @@ function showPage6() {
         snowContainer.classList.add('hidden');
     }
     
+    // Play music
+    const music = document.getElementById('valentineMusic');
+    if (music) {
+        music.play().catch(err => {
+            console.log("Music autoplay blocked - user interaction needed");
+        });
+    }
+    
     // Start hearts
     startHearts();
 }
