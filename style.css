@@ -1,14 +1,75 @@
 body {
     text-align: center;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ffe6f0 0%, #ffd4e5 100%);
     overflow: hidden;
     min-height: 100vh;
+    position: relative;
+    transition: background 1s ease;
+}
+
+/* Cold icy background for pages 1-5 */
+body.cold {
+    background: linear-gradient(135deg, #e0f2ff 0%, #b8d8f5 50%, #cfe9ff 100%);
+}
+
+/* Warm romantic background for page 6 */
+body.warm {
+    background: linear-gradient(135deg, #ffe6f0 0%, #ffb3d9 50%, #ffd4e5 100%);
+}
+
+/* Extra warm celebration background */
+body.celebration {
+    background: linear-gradient(135deg, #ffccef 0%, #ff99dd 50%, #ffb3e6 100%);
+}
+
+/* Snowflake container */
+#snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#snowflakes.hidden {
+    opacity: 0;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    user-select: none;
+    z-index: 1;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+#hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .page {
     margin-top: 80px;
     animation: fadeIn 0.5s ease-in;
+    position: relative;
+    z-index: 2;
 }
 
 .hidden {
@@ -30,6 +91,7 @@ h1 {
     font-size: 32px;
     color: #333;
     margin: 20px;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
 }
 
 h2 {
@@ -48,6 +110,8 @@ button {
     background-color: #ff4d88;
     color: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 10;
 }
 
 button:hover {
@@ -74,6 +138,7 @@ button:hover {
     width: 300px;
     margin-top: 30px;
     margin-bottom: 20px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
 }
 
 /* Different penguin animations for each story step */
@@ -193,6 +258,7 @@ button:hover {
     transform: translateX(-50%);
     font-size: 60px;
     animation: floatRose 3s ease-in-out infinite;
+    z-index: 5;
 }
 
 @keyframes floatRose {
