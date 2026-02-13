@@ -118,3 +118,11 @@ function startHearts() {
         }, 5000);
     }, 300);
 }
+
+function revealSecret() {
+    const secretMsg = document.getElementById('secretMessage');
+    const secretBtn = document.querySelector('.secret-btn');
+    
+    secretMsg.classList.remove('hidden');
+    secretBtn.style.display = 'none';
+}
