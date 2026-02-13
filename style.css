@@ -1,0 +1,59 @@
+body {
+    text-align: center;
+    font-family: Arial;
+    background: #ffe6f0;
+    overflow: hidden;
+}
+
+.page {
+    margin-top: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background-color: #ff4d88;
+    color: white;
+}
+
+#noBtn {
+    position: absolute;
+    background-color: grey;
+    color: white;
+}
+
+.penguin {
+    width: 300px;
+    margin-top: 30px;
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
