@@ -8,31 +8,57 @@
 
 <div id="hearts"></div>
 
+<!-- Page 1: Initial question -->
 <div id="page1" class="page">
-    <h1>Hey… I need to confess something</h1>
-    <img src="penguin.jpeg" class="penguin">
-    <button onclick="showStory()">What really happened?</button>
+    <h1>Hey... have you seen your bowling ball?</h1>
+    <img src="penguin.jpeg" class="penguin innocent">
+    <button onclick="showPage2()">No, have you?</button>
 </div>
 
+<!-- Page 2: Denial -->
 <div id="page2" class="page hidden">
-    <h2>
-        I know I said I haven't seen your bowling ball... <br><br>
-        But the truth is... I actually ate it 🐧 <br><br>
-        Because I wanted you to come to me...
-    </h2>
-    <button onclick="showQuestion()">Okay… now what?</button>
+    <h1>Bowling ball??? <br>I haven't seen your bowling ball... 🤔</h1>
+    <img src="penguin.jpeg" class="penguin nervous">
+    <button onclick="showPage3()">Are you sure?</button>
 </div>
 
+<!-- Page 3: Starting to crack -->
 <div id="page3" class="page hidden">
-    <h1>🌹🌹🌹</h1>
-    <h2>Will you be my Valentine?</h2>
-
-    <button id="yesBtn" onclick="yesClicked()">Yes 💖</button>
-    <button id="noBtn" onmouseover="moveButton()">No</button>
+    <h1>Okay fine... <br>I might have seen it...</h1>
+    <img src="penguin.jpeg" class="penguin shaking">
+    <button onclick="showPage4()">Tell me the truth!</button>
 </div>
 
+<!-- Page 4: The confession -->
+<div id="page4" class="page hidden">
+    <h1>I... I ate it 🐧💦</h1>
+    <img src="penguin.jpeg" class="penguin guilty">
+    <button onclick="showPage5()">WHAT?! Why??</button>
+</div>
+
+<!-- Page 5: The reason -->
+<div id="page5" class="page hidden">
+    <h1>Because I wanted you <br>to come see me... 👉👈</h1>
+    <img src="penguin.jpeg" class="penguin shy">
+    <button onclick="showPage6()">Oh...</button>
+</div>
+
+<!-- Page 6: The question with rose -->
+<div id="page6" class="page hidden">
+    <div class="rose">🌹</div>
+    <h1>So... will you be my Valentine? 💕</h1>
+    <img src="penguin.jpeg" class="penguin hopeful">
+    
+    <div class="button-container">
+        <button id="yesBtn" onclick="yesClicked()">Yes 💖</button>
+        <button id="noBtn" onmouseover="moveButton()">No</button>
+    </div>
+</div>
+
+<!-- Success page -->
 <div id="success" class="page hidden">
     <h1>BEST DECISION OF YOUR LIFE ❤️</h1>
+    <img src="penguin.jpeg" class="penguin celebrating">
     <h2>The penguin is very happy 🐧💘</h2>
 </div>
 
